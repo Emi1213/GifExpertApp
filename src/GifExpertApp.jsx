@@ -10,15 +10,15 @@ export const GifExpertApp = () => {
 
   // eslint-disable-next-line no-unused-vars
   const onAddCategory = (category) => {
+    if (categories.includes(category)) return;
     setCategories([...categories, category]);
   };
   return (
     <>
-      <AddCategory setCategories={setCategories} />
-      <button className="border border-black">Agregar</button>
-      <ol>
+      <AddCategory onNewCategory={onAddCategory} />
+      <ol type="1">
         {categories.map((category) => {
-          return <li key={category}>{category}</li>;
+          return <li key={category} className="text-lg ">{category}</li>;
         })}
       </ol>
     </>

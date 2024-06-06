@@ -5,6 +5,8 @@ import "./global.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <GifExpertApp />
+    <div className="flex flex-col justify-center items-center">
+      <GifExpertApp />
+    </div>
   </React.StrictMode>
 );
