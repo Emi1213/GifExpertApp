@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 
+// eslint-disable-next-line react/prop-types
 export const AddCategory = ({ setCategories }) => {
   const [inputValue, setInputValue] = useState("");
   const handleInputChange = ({ target }) => {
@@ -7,7 +8,9 @@ export const AddCategory = ({ setCategories }) => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (inputValue.trim().length <= 1) return;
     setCategories((categories) => [...categories, inputValue]);
+    
   };
 
   return (

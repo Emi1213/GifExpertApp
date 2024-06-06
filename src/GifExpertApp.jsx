@@ -8,6 +8,7 @@ export const GifExpertApp = () => {
     "Dragon Ball",
   ]);
 
+  // eslint-disable-next-line no-unused-vars
   const onAddCategory = (category) => {
     setCategories([...categories, category]);
   };
