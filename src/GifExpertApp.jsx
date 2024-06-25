@@ -9,13 +9,13 @@ export const GifExpertApp = () => {
     "Dragon Ball",
   ]);
 
-  // eslint-disable-next-line no-unused-vars
   const onAddCategory = (category) => {
     if (categories.includes(category)) return;
     setCategories([...categories, category]);
   };
   return (
     <>
+      <h1>Gift Expert App</h1>
       <AddCategory onNewCategory={onAddCategory} />
       
         {categories.map((category) => (
